@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Resturant_Utility</string>
+    <string name="resturant_name">Sunil\'s Resturant</string>
+    <string name="welcome_note">Dear valued customer! You\'re welcome to our resturant!</string>
+    <string name="next_button">Next button</string>
+    <string name="previous_button">Previous button</string>
+    <string name="i_don_t_want_to_tip">I don\'t want to tip</string>
+    <string name="i_want_to_tip">I want to tip</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="your_order_summary">Your order summary</string>
+    <string name="pay">Pay</string>
+    <string name="scroll_to_set_the_tipping_scale">Scroll to set the percentage you want to tip.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+</resources>
