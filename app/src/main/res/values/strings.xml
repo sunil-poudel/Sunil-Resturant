@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Resturant_Utility</string>
+    <string name="app_name">Sunil Resturant</string>
     <string name="resturant_name">Sunil\'s Resturant</string>
     <string name="welcome_note">Dear valued customer! You\'re welcome to our resturant!</string>
     <string name="next_button">Next button</string>
@@ -12,5 +12,6 @@
     <string name="scroll_to_set_the_tipping_scale">Scroll to set the percentage you want to tip.</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="slide_this_bar">Slide this bar</string>
 
 </resources>

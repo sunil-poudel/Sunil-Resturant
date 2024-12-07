@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     private SeekBar seekBar;
     private TextView seekQuantity;
     private TextView seekBill;
+    private TextView slideBar;
+
+
     private boolean firstClick = true;
     private int itemIndex=-1;
     private int orderQuantity=0;
@@ -54,7 +57,9 @@ public class MainActivity extends AppCompatActivity {
         seekBar = findViewById(R.id.seek_quantity);
         seekQuantity = findViewById(R.id.bill_quantity);
         seekBill = findViewById(R.id.bill_pay);
+        slideBar = findViewById(R.id.slide_bar);
 
+        slideBar.setVisibility(View.INVISIBLE);
         itemImage.setImageResource(R.drawable.initial_menu);
         seekBar.setVisibility(View.INVISIBLE);
 
@@ -69,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                slideBar.setVisibility(View.VISIBLE);
                 seekBar.setVisibility(View.VISIBLE);
                 seekBar.setProgress(0);
 
@@ -83,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                slideBar.setVisibility(View.VISIBLE);
                 seekBar.setVisibility(View.VISIBLE);
                 seekBar.setProgress(0);
 
@@ -100,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int qty, boolean bool) {
+                slideBar.setVisibility(View.INVISIBLE);
                 seekQuantity.setText(String.format(Locale.US,"Quuantity: %d", qty));
                 seekBill.setText(String.format(Locale.US,"You'll pay: $%.2f", (qty*items.rate[itemIndex])));
                 orderQuantity = qty;
@@ -108,8 +116,6 @@ public class MainActivity extends AppCompatActivity {
                     order.setVisibility(View.VISIBLE);
                 else
                     order.setVisibility(View.INVISIBLE);
-
-                order.setBackgroundColor(Color.BLACK);
 
                 Log.d("SEEK", String.format("%d %s", qty, bool));
                 Log.d("SEEK", String.format("%d ", itemIndex));
